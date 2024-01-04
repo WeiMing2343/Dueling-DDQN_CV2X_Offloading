@@ -3,14 +3,14 @@
 # 1. 5G傳輸與DSRC傳輸方式比較
 ![Image Alt Text](plots/all_avg_score_offloading_plot/offloading_5g_and_DSRC.png)
 
-## 2. 學習率對Dueling-DDQN影響
+# 2. 學習率對Dueling-DDQN影響
 ![Image Alt Text](plots/learning_rate/offloading_all_avg.png)
 
-## 3. 衰減率對Dueling-DDQN影響
+# 3. 衰減率對Dueling-DDQN影響
 ![Image Alt Text](plots/GAMMA/offloading_all__gamma_avg.png)
 
-## 4. 不同強化學習在車載環境計算卸載影響 
+# 4. 不同強化學習在車載環境計算卸載影響 
 ![Image Alt Text](plots/all_avg_score_offloading_plot/offloading_all_avg.png)
 
-## 5. 不同強化學習計算時間延遲率
+# 5. 不同強化學習計算時間延遲率
 ![Image Alt Text](plots/localization_latency/localization_latency_CDF.png)
