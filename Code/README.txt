@@ -1,0 +1,4 @@
+所有的資料數據都集中在Dueling DDQN，在Plots資料夾裡面
+要執行主程式到各個料夾main.ipynb執行訓練
+繪圖在Dueling DDQN 的plot.ipynb檔裡面
+ture_city以及ture_highway包含了SUMO的模擬

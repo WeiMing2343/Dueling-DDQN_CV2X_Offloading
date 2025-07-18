@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-05-04 14:55:30.341744 by osmWebWizard.py v1_16_0+0000-94ec4c6cd72
+<configuration>
+    <allow-fringe.min-length value="1000.0"/>
+    <begin value="0"/>
+    <end value="3600"/>
+    <fringe-factor value="5"/>
+    <fringe-start-attributes value="departSpeed=&quot;max&quot;"/>
+    <insertion-density value="12.0"/>
+    <lanes value="True"/>
+    <min-distance.fringe value="10.0"/>
+    <min-distance value="300.0"/>
+    <net-file value="C:\Users\asd95\Sumo\2023-05-04-14-55-27\osm.net.xml.gz"/>
+    <remove-loops value="True"/>
+    <route-file value="C:\Users\asd95\Sumo\2023-05-04-14-55-27\osm.passenger.rou.xml"/>
+    <trip-attributes value="departLane=&quot;best&quot;"/>
+    <output-trip-file value="C:\Users\asd95\Sumo\2023-05-04-14-55-27\osm.passenger.trips.xml"/>
+    <prefix value="veh"/>
+    <validate value="True"/>
+    <vehicle-class value="passenger"/>
+</configuration>
+-->
+
+<!-- generated on 2023-05-04 14:55:30 by Eclipse SUMO duarouter Version 1.16.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\asd95\Sumo\2023-05-04-14-55-27\osm.net.xml.gz"/>
+        <route-files value="C:\Users\asd95\Sumo\2023-05-04-14-55-27\osm.passenger.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\Users\asd95\Sumo\2023-05-04-14-55-27\osm.passenger.trips.xml.tmp"/>
+        <alternatives-output value="NUL"/>
+        <write-trips value="true"/>
+    </output>
+
+    <processing>
+        <remove-loops value="true"/>
+    </processing>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+
+    <report>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="veh_passenger" vClass="passenger"  maxSpeed="11.11" carFollowModel = "IDM"  laneChangeModel="LC2013" lcStrategic="1"  lcCooperative="0.0" actionStepLength = "1" tau = "1.4" accel = "1" decel = "3.4" minGap = "2" delta = "4" stepping = "1.5"/>
+
+    
+    <flow id="a" type="veh_passenger" begin="0.00" end = "1000" number = "40" departLane="random" departSpeed="10" color = "0,1,0" from="A1" to="A4 ">
+    </flow>
+    <flow id="a_to_f1" type="veh_passenger" begin="0.00" end = "1000" number = "21" departLane="best" departSpeed="5" color = "1,0,0" from="A1" to="F1 ">
+    </flow>
+    <flow id="a_to_E1" type="veh_passenger" begin="0.00" end = "1000" number = "31" departLane="best" departSpeed="9" color = "0,0,1" from="A1" to="E1 ">
+    </flow>
+    <flow id="a_to_E3" type="veh_passenger" begin="0.00" end = "1000" number = "15" departLane="best" departSpeed="5" color = "0,0,1" from="A1" to="E3 ">
+    </flow>
+    <flow id="a_to_E5" type="veh_passenger" begin="0.00" end = "1000" number = "18" departLane="best" departSpeed="6" color = "0,0,1" from="A1" to="E3 ">
+    </flow>
+    <flow id="a_return" type="veh_passenger" begin="0.00" end = "1000" number = "10" departLane="best" departSpeed="4" color = "0,1,0" from="A1" to="B1 ">
+    </flow>
+    <flow id="a_return2" type="veh_passenger" begin="0.00" end = "1000" number = "7" departLane="best" departSpeed="7"  color = "0,1,0">
+        <route edges="A1 A2 B2 B1"/>
+    </flow>
+
+    <flow id="b" type="veh_passenger" begin="0.00" end = "1000" number = "40" departLane="best" departSpeed="10" color = "0,1,0" from="B4" to="B1 ">
+    </flow>  
+    <flow id="b_to_E5" type="veh_passenger" begin="0.00" end = "1000" number = "18" departLane="best" departSpeed="5" color = "0,1,0" >
+        <route edges="B4 E5 D3 D2 D1"/>
+    </flow>
+    <flow id="b_to_E3" type="veh_passenger" begin="0.00" end = "1000" number = "25" departLane="best" departSpeed="6" color = "0,1,1" >
+        <route edges="B4 B3 E3 D2 D1"/>
+    </flow>
+    <flow id="b_to_E1" type="veh_passenger" begin="0.00" end = "1000" number = "31" departLane="best" departSpeed="6" color = "1,1,0" >
+        <route edges="B4 B3 B2 E1 D1 "/>
+    </flow>
+    
+
+    <flow id="c_to_E2_0" type="veh_passenger" begin="0.00" end = "1000" number = "18" departLane="best" departSpeed="5" color = "0,1,0" >
+        <route edges="C1 E2 A2 A3 A4"/>
+    </flow>
+    <flow id="c_to_E2_1" type="veh_passenger" begin="0.00" end = "1000" number = "10" departLane="best" departSpeed="5" color = "0,1,0" >
+        <route edges="C1 E2 B1"/>
+    </flow>
+
+    <flow id="c_to_E4_0" type="veh_passenger" begin="0.00" end = "1000" number = "6" departLane="best" departSpeed="5" color = "0,1,0" >
+        <route edges="C1 C2 E4 A3 A4"/>
+    </flow>
+    <flow id="c_to_E4_1" type="veh_passenger" begin="0.00" end = "1000" number = "8" departLane="best" departSpeed="5" color = "0,1,0" >
+        <route edges="C1 C2 E4 B2 B1"/>
+    </flow> 
+    <flow id="c_to_E4_2" type="veh_passenger" begin="0.00" end = "1000" number = "9" departLane="best" departSpeed="5" color = "0,1,0" >
+        <route edges="C1 C2 E4 F1"/>
+    </flow> 
+    <flow id="c_to_E4_3" type="veh_passenger" begin="0.00" end = "1000" number = "5" departLane="best" departSpeed="5" color = "0,1,0" >
+        <route edges="C1 C2 C3 D3 D2 D1"/>
+    </flow>       
+</routes>

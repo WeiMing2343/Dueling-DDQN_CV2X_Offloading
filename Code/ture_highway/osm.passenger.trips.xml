@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2023-04-26 16:00:24.629192 by osmWebWizard.py v1_16_0+0000-94ec4c6cd72
+<configuration>
+    <allow-fringe.min-length value="1000.0"/>
+    <begin value="0"/>
+    <end value="3600"/>
+    <fringe-factor value="5"/>
+    <fringe-start-attributes value="departSpeed=&quot;max&quot;"/>
+    <insertion-density value="12.0"/>
+    <lanes value="True"/>
+    <min-distance.fringe value="10.0"/>
+    <min-distance value="300.0"/>
+    <net-file value="C:\Users\asd95\Sumo\2023-04-26-16-00-20\osm.net.xml.gz"/>
+    <remove-loops value="True"/>
+    <route-file value="C:\Users\asd95\Sumo\2023-04-26-16-00-20\osm.passenger.rou.xml"/>
+    <trip-attributes value="departLane=&quot;best&quot;"/>
+    <output-trip-file value="C:\Users\asd95\Sumo\2023-04-26-16-00-20\osm.passenger.trips.xml"/>
+    <prefix value="veh"/>
+    <validate value="True"/>
+    <vehicle-class value="passenger"/>
+</configuration>
+-->
+
+<!-- generated on 2023-04-26 16:00:24 by Eclipse SUMO duarouter Version 1.16.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\asd95\Sumo\2023-04-26-16-00-20\osm.net.xml.gz"/>
+        <route-files value="C:\Users\asd95\Sumo\2023-04-26-16-00-20\osm.passenger.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\Users\asd95\Sumo\2023-04-26-16-00-20\osm.passenger.trips.xml.tmp"/>
+        <alternatives-output value="NUL"/>
+        <write-trips value="true"/>
+    </output>
+
+    <processing>
+        <remove-loops value="true"/>
+    </processing>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+
+    <report>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</configuration>
+-->
+
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="CarA" length="5.00" maxSpeed="30.4" carFollowModel = "IDM"  laneChangeModel="LC2013"  lcStrategic="1"  lcCooperative="0.0" actionStepLength = "1" tau = "1.4" accel = "1" decel = "3.4" minGap = "2" delta = "4" stepping = "1.5"/>
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+    <flow id="a_right" type="CarA" begin="0.00" end = "1000" number = "150" departLane="2" departSpeed="15.5" color = "0,1,0" from="552458680" to="5907225 ">
+    </flow>
+    <flow id="a_middel" type="CarA" begin="0.00" end = "1000" number = "550" departLane="1" departSpeed="20.5" color = "0,0,1" from="552458680" to="5907225 ">
+    </flow>
+    <flow id="a_left" type="CarA" begin="0.00" end = "1000" number = "50" departLane="0" departSpeed="max" color = "0,1,0" from="552458680" to="E3 ">
+    </flow>
+    
+    <flow id="b_left" type="CarA" begin="0.00" end = "1000" number = "280" departLane="3" departSpeed="max" color = "1,0,1" from="E1" to="E3 ">
+    </flow>
+    <flow id="b_middle_left" type="CarA" begin="0.00" end = "1000" number = "100" departLane="2" departSpeed="20.5" color = "1,1,0" from="E1" to="E3 ">
+    </flow>
+    <flow id="b_middle_right" type="CarA" begin="0.00" end = "1000" number = "50" departLane="1" departSpeed="20.5" color = "0,1,1" from="E1" to="E3 ">
+    </flow>
+    <flow id="b_right" type="CarA" begin="0.00" end = "1000" number = "80" departLane="0" departSpeed="15.5" color = "0,1,0" from="E1" to="E3 ">
+    </flow>
+
+    <flow id="c_left" type="CarA" begin="0.00" end = "1000" number = "500" departLane="3" departSpeed="max" color = "1,0,1" from="C1" to="C3 ">
+    </flow>
+    <flow id="c_middle_left" type="CarA" begin="0.00" end = "1000" number = "460" departLane="2" departSpeed="20.5" color = "1,1,0" from="C1" to="C3 ">
+    </flow>
+    <flow id="c_middle_right" type="CarA" begin="0.00" end = "1000" number = "400" departLane="1" departSpeed="20.5" color = "0,1,1" from="C1" to="C3 ">
+    </flow>
+    <flow id="c_right" type="CarA" begin="0.00" end = "1000" number = "270" departLane="0" departSpeed="15.5" color = "0,1,0" from="C1" to="C3 ">
+    </flow>
+    <flow id="c_right_right" type="CarA" begin="0.00" end = "1000" number = "150" departLane="0" departSpeed="15.5" color = "1,1,1" from="C1" to="C6 ">
+    </flow>
+    <flow id="c_left_right" type="CarA" begin="0.00" end = "1000" number = "250" departLane="random" departSpeed="15.5" color = "1,0,0" from="C5" to="C6 ">
+    </flow>
+</routes>
